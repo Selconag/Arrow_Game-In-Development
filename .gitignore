@@ -1,0 +1,14 @@
+#Custom Added files
+Assets/*
+
+!Assets/Scripts
+
+Library/*
+
+obj/*
+
+.vs/*
+
+ProjectSettings/*
+
+UserSettings/*
