@@ -86,14 +86,14 @@ public class yonetici : MonoBehaviour
         {
             GameObject yeni_ok = Instantiate(ok, kamera.position, kamera.rotation);
             spawn = true;
-            while (Input.GetMouseButtonDown(0))
+            while (Input.GetMouseButtonDown(0))//Gücü hesapla
             {
                 guc *= Time.deltaTime * chargeSpeed;
             }
-            yeni_ok.GetComponent<Rigidbody>().AddForce(yeni_ok.transform.forward * guc);
-            guc = reset_guc;
-            spawn = false;
-            Destroy(yeni_ok, 4.0f);
+            yeni_ok.GetComponent<Rigidbody>().AddForce(yeni_ok.transform.forward * guc);//Rigidbodye güç ekle ve fırlat
+            guc = reset_guc;//Ekledikten sonra gücü sıfırla
+            spawn = false;//???
+            Destroy(yeni_ok, 4.0f);//4Sn içinde oku yok et
         }
         else
         {
